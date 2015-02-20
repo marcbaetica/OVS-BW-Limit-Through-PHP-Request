@@ -5,5 +5,5 @@
 # mininet> s1 ovs-vsctl set interface s1-eth1 ingress_policing_burst=5000
 # for testing use the iperf command in mininet or install and use nperf
 
-echo "s1 ovs-vsctl set interface s1-eth$1 ingress_policing_rate=$2"
-echo "s1 ovs-vsctl set interface s1-eth$1 ingress_policing_burst=$3"
+s1 ovs-vsctl set interface s1-eth$1 ingress_policing_rate=$2
+s1 ovs-vsctl set interface s1-eth$1 ingress_policing_burst=$3
