@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS `macRulesTable` (
 `total_all` bigint(9) DEFAULT '60',
 `start_time` time DEFAULT '12:00:00',
 `stop_time` time DEFAULT '08:00:00',
-`bw_limit` int(10) DEFAULT '2,147,483,646'
+`bw_limit` bigint(10) DEFAULT '4294967294'
 )
