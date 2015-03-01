@@ -3,8 +3,27 @@
 <body>
 
 <form action="welcome.php" method="post">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
+MAC:
+<?php
+//choose fom MySQL database
+mysql_connect('localhost', 'root', 'root') or die("Connection failed");
+mysql_select_db('sdn_db') or die("Connection failed");
+
+//$sql = "SELECT * FROM macrulestable";
+$sql = "SELECT mac FROM macrulestable";
+$result = mysql_query($sql) or die ("Error in query: $query " . mysql_error()); 
+echo mysql_num_rows($result);
+?>
+
+<select name='mac_choose'> <!--creating drop down menu-->
+
+<?php while ($row = mysql_fetch_array($result)) { ?>
+	<option value="<?php echo $row['mac'];?>"> <?php echo $row['mac'];?> </option>
+<?php } ?>
+</select>
+
+
+BW Limitation: <input type="text" name="limit"><br>
 <input type="submit">
 </form>
 
