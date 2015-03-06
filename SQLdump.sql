@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `macRulesTable` (
 `bw_limit` bigint(10) DEFAULT '4294967294'	#set for maximum rate in kb/s
 `current_user_usage` #the usage per user
 `current_total_usage` #the total usage over the internet duplicate for every user
-`terminal_name' #string for GUI render without 
+`terminal_name` #string for GUI render without 
 );
 
 #temporarily used for testing purposes. Make sure to comment out in the final version
