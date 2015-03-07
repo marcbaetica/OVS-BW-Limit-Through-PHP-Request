@@ -1,8 +1,8 @@
-create database if not exists sdn_db;
+create database if not exists macRulesSchema;
 
-use sdn_db;
+use macRulesSchema;
 
-drop table if exists macrulestable;
+drop table if exists macRulesTable;
 
 CREATE TABLE IF NOT EXISTS `macRulesTable` (
 `Index` integer PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -12,9 +12,9 @@ CREATE TABLE IF NOT EXISTS `macRulesTable` (
 `total_all` bigint(9) DEFAULT '60', #to be updated when user generates initial setup
 `start_time` time DEFAULT '12:00:00', #start and stop time are set to a default 24h cycle
 `stop_time` time DEFAULT '12:00:00',
-`bw_limit` bigint(10) DEFAULT '4294967294'	#set for maximum rate in kb/s
-`current_user_usage` bigint(10) DEFAULT '15' #the usage per user
-`current_total_usage` bigint(10) DEFAULT '20' #the total usage over the internet duplicate for every user
+`bw_limit` bigint(10) DEFAULT '4294967294',    #set for maximum rate in kb/s
+`current_user_usage` bigint(10) DEFAULT '15', #the usage per user
+`current_total_usage` bigint(10) DEFAULT '20', #the total usage over the internet duplicate for every user
 `terminal_name` varchar(17) DEFAULT NULL #string for rendering the computer names in the GUI instead of the MAC address
 );
 
