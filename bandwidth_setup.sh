@@ -10,6 +10,6 @@ s1 ovs-vsctl set interface s1-eth$1 ingress_policing_burst=$3
 
 #for egress via OVS (this is a layer 3 request)
 
-#ovs-vsctl -- set Port vnet2 qos=@newqos -- \
-#--id=@newqos create QoS type=linux-htb other-config:max-rate=4000000 queues=0=@q0 -- \
-#--id=@q0   create   Queue   other-config:min-rate=4000000 other-config:max-rate=4000000
+ovs-vsctl -- set Port vnet2 qos=@newqos -- \
+--id=@newqos create QoS type=linux-htb other-config:max-rate=4000000 queues=0=@q0 -- \
+--id=@q0   create   Queue   other-config:min-rate=4000000 other-config:max-rate=4000000
