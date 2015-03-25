@@ -12,10 +12,10 @@ class MyTopo( Topo ) :
 	Topo.__init__(self)
 
 	#adding hosts and switch
-	firstHost = self.addHost('h1')
-	secondHost = self.addHost('h2')
-	thirdHost = self.addHost('h3')
-	fourthHost = self.addHost('h4')
+	firstHost = self.addHost("Jim's Laptop")
+	secondHost = self.addHost("Admin Host")
+	thirdHost = self.addHost("Jen's PC")
+	fourthHost = self.addHost("XBox")
 	ourSwitch = self.addSwitch('s1')
 
 	#adding links
