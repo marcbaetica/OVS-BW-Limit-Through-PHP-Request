@@ -1,3 +1,4 @@
+# Marc-Alexandru Baetica
 # this file contains basic commands that are called to limit the ingress bandwidth over an OVS interface in a mininet topology
 # a basic 50Mb/s implementation of this would be for interface s1-eth1 (attached to switch s1 and making the way to host h1), where the rate is measured in bits would be by calling $./bandwidth_setup.sh 1 5000 500
 # also for simply calling the command in mininet it would be
